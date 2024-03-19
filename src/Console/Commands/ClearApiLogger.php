@@ -1,8 +1,8 @@
 <?php
 
-namespace AWT\Console\Commands;
+namespace YXS\Console\Commands;
 
-use AWT\Contracts\ApiLoggerInterface;
+use YXS\Contracts\ApiLoggerInterface;
 use Illuminate\Console\Command;
 
 class ClearApiLogger extends Command

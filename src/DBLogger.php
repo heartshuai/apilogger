@@ -1,8 +1,8 @@
 <?php
 
-namespace AWT;
+namespace YXS;
 
-use AWT\Contracts\ApiLoggerInterface;
+use YXS\Contracts\ApiLoggerInterface;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -27,12 +27,12 @@ class DBLogger extends AbstractLogger implements ApiLoggerInterface{
      */
     public function getLogs()
     {
-        return $this->logger->orderByDesc('created_at')->paginate(config('apiloger.per_page', 25));
+        return $this->logger->orderByDesc('created_at')->paginate(config('apilog.per_page', 25));
     }
     /**
      * save logs in database
      */
-    public function saveLogs(Request $request, Response|JsonResponse|RedirectResponse $response)
+    public function saveLogs(Request $request, $response)
     {
         $data = $this->logData($request,$response);
 

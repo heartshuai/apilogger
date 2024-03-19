@@ -1,8 +1,8 @@
 <?php
 
-namespace AWT\Http\Middleware;
+namespace YXS\Http\Middleware;
 
-use AWT\Contracts\ApiLoggerInterface;
+use YXS\Contracts\ApiLoggerInterface;
 use Closure;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -31,7 +31,7 @@ class ApiLogger
         return $response;
     }
 
-    public function terminate(Request $request, Response|JsonResponse|RedirectResponse $response) {
+    public function terminate(Request $request, $response) {
         $this->logger->saveLogs($request, $response);
     }
 }

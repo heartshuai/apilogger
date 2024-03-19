@@ -1,13 +1,13 @@
 <?php
 
-namespace AWT;
+namespace YXS;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
-use AWT\Contracts\ApiLoggerInterface;
+use YXS\Contracts\ApiLoggerInterface;
 
 class FileLogger extends AbstractLogger implements ApiLoggerInterface
 {
@@ -57,7 +57,7 @@ class FileLogger extends AbstractLogger implements ApiLoggerInterface
      *
      * @return void
      */
-    public function saveLogs(Request $request, Response|JsonResponse|RedirectResponse $response)
+    public function saveLogs(Request $request, $response)
     {
         $data = $this->logData($request, $response);
 

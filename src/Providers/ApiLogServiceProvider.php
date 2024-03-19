@@ -1,13 +1,13 @@
 <?php
 
-namespace AWT\Providers;
+namespace YXS\Providers;
 
-use AWT\Console\Commands\ClearApiLogger;
-use AWT\Http\Exceptions\InvalidApiLogDriverException;
-use AWT\Http\Middleware\ApiLogger;
-use AWT\Contracts\ApiLoggerInterface;
-use AWT\DBLogger;
-use AWT\FileLogger;
+use YXS\Console\Commands\ClearApiLogger;
+use YXS\Http\Exceptions\InvalidApiLogDriverException;
+use YXS\Http\Middleware\ApiLogger;
+use YXS\Contracts\ApiLoggerInterface;
+use YXS\DBLogger;
+use YXS\FileLogger;
 use Exception;
 use Illuminate\Support\ServiceProvider;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace AWT;
+namespace YXS;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -47,7 +47,7 @@ abstract class AbstractLogger{
      *
      * @return array
      */
-    public function logData(Request $request, Response|JsonResponse|RedirectResponse $response){
+    public function logData(Request $request, $response){
         $currentRouteAction = Route::currentRouteAction();
 
         // Initialiaze controller and action variable before use them
